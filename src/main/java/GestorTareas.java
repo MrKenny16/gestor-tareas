@@ -14,7 +14,7 @@ public class GestorTareas {
             System.out.println("2. Listar tareas");
             System.out.println("3. Marcar tarea como completada");
             System.out.println("4. Salir");
-            System.out.print("Selecciona una opción: ");
+            System.out.print("Selecciona una opcion: ");
             try {
                 opcion = Integer.parseInt(scanner.nextLine());
             } catch (NumberFormatException e) {
@@ -36,7 +36,7 @@ public class GestorTareas {
                     System.out.println("Saliendo del programa...");
                     break;
                 default:
-                    System.out.println("Opción no válida. Intenta de nuevo.");
+                    System.out.println("Opcion no válida. Intenta de nuevo.");
             }
         } while (opcion != 4);
     }
@@ -52,7 +52,7 @@ public class GestorTareas {
     public static void listarTareas() {
         System.out.println("\n=== Lista de Tareas ===");
         if (tareas.isEmpty()) {
-            System.out.println("Aún no hay tareas registradas.");
+            System.out.println("Aun no hay tareas registradas.");
         } else {
             for (int i = 0; i < tareas.size(); i++) {
                 System.out.println((i + 1) + ". " + tareas.get(i));
@@ -63,7 +63,7 @@ public class GestorTareas {
     public static void completarTarea() {
         {
             Scanner scanner = new Scanner(System.in);
-            System.out.println("\n¿Qué número de tarea terminaste?");
+            System.out.println("\n¿Qué numero de tarea terminaste?");
             int numeroTarea = scanner.nextInt();
 
 
@@ -74,7 +74,7 @@ public class GestorTareas {
                 GestorTareas.tareas.set(indice, tareaActualizada);
                 System.out.println("Tarea marcada como completada");
             } else {
-                System.out.println("Ese número de tarea no existe.");
+                System.out.println("Ese numero de tarea no existe.");
             }
         }
 
