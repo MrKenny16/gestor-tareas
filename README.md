@@ -18,3 +18,7 @@ personales que permitirá registrar una tarea, listar tareas y marcar una tarea 
 * **Gestor de versiones:** Git [ 2.52.0.windows.1]
 * **IDE:** IntelliJ IDEA [2025 2.1]
 
+## Funcionalidades y responsables
+* **Registrar tarea:** Permite crear una tarea con descripción y estado "[Completado]" (Desarrollado por [Kennay Montijo]
+* **Listar tareas:** Muestra en consola todas las tareas registradas y sus estados actuales (Desarrollado por [Carlos Tirado]
+* **Completar tarea:** Busca una tarea existente y actualiza su estado a "[Completada]" (Desarrollado por [Roberto Chavarin]
