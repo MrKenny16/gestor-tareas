@@ -12,7 +12,7 @@ public class GestorTareas {
             System.out.println("\n--- GESTOR DE TAREAS ---");
             System.out.println("1. Registrar tarea");
             System.out.println("2. Listar tareas");
-            // System.out.println("3. Marcar tarea como completada"); // Esta opción está comentada por ahora
+            System.out.println("3. Marcar tarea como completada");
             System.out.println("4. Salir");
             System.out.print("Selecciona una opción: ");
             try {
@@ -55,4 +55,22 @@ public class GestorTareas {
             }
         }
     }
+
+    {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("\n¿Qué número de tarea terminaste?");
+        int numeroTarea = scanner.nextInt();
+
+
+        if (numeroTarea > 0 && numeroTarea <= GestorTareas.tareas.size()) {
+            int indice = numeroTarea - 1;
+            String tareaActual = GestorTareas.tareas.get(indice);
+            String tareaActualizada = tareaActual.replace("[Pendiente]", "[Completada]");
+            GestorTareas.tareas.set(indice, tareaActualizada);
+            System.out.println("Tarea marcada como completada");
+        } else {
+            System.out.println("Ese número de tarea no existe.");
+        }
+    }
+
 }
