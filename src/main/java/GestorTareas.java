@@ -28,6 +28,10 @@ public class GestorTareas {
                 case 2:
                     listarTareas();
                     break;
+                case 3:
+                    completarTarea();
+                    break;
+
                 case 4:
                     System.out.println("Saliendo del programa...");
                     break;
@@ -56,21 +60,23 @@ public class GestorTareas {
         }
     }
 
-    {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("\n¿Qué número de tarea terminaste?");
-        int numeroTarea = scanner.nextInt();
+    public static void completarTarea() {
+        {
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("\n¿Qué número de tarea terminaste?");
+            int numeroTarea = scanner.nextInt();
 
 
-        if (numeroTarea > 0 && numeroTarea <= GestorTareas.tareas.size()) {
-            int indice = numeroTarea - 1;
-            String tareaActual = GestorTareas.tareas.get(indice);
-            String tareaActualizada = tareaActual.replace("[Pendiente]", "[Completada]");
-            GestorTareas.tareas.set(indice, tareaActualizada);
-            System.out.println("Tarea marcada como completada");
-        } else {
-            System.out.println("Ese número de tarea no existe.");
+            if (numeroTarea > 0 && numeroTarea <= GestorTareas.tareas.size()) {
+                int indice = numeroTarea - 1;
+                String tareaActual = GestorTareas.tareas.get(indice);
+                String tareaActualizada = tareaActual.replace("[Pendiente]", "[Completada]");
+                GestorTareas.tareas.set(indice, tareaActualizada);
+                System.out.println("Tarea marcada como completada");
+            } else {
+                System.out.println("Ese número de tarea no existe.");
+            }
         }
-    }
 
+    }
 }
